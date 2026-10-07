@@ -2,4 +2,4 @@ Makefile
 *.sh
 *.exe
 *.o
-
+.specials.h.swp
