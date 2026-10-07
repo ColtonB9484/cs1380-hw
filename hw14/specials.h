@@ -1,5 +1,5 @@
 #ifndef SPECIALS_H
-#define SEPCIALS_H
+#define SPECIALS_H
 
 int sum_order(const int prices[], int n);
 int factorial(int n);
