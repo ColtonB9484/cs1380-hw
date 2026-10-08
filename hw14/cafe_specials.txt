@@ -11,13 +11,52 @@ When might a loop be a better fit than recursion for summing an order?
 	is always the same.
 
 Hand trace factorial(4):
-	4 * factorial(4 - 1)
-	3 * factorial(3 - 1)
-	2 * factorial(2 - 1)
-	return 1
-	return 2 * 1
-	return 3 * 2
-	return 4 * 6
-	value = 24
+	factorial(4)
+	   4 * factorial(3)
+		  3 * factorial(2)
+			2 * factorial(1) 
+				1
+				|
+		       |----2 * 1
+	      |------3 * 2
+	  4 * 6
+	  = 24
 
-Hand-trace fib(4): 
+Hand-trace fib(4):
+	fib(4)
+	|-fib(3)
+	|  |  |-fib(2)
+	|  |  	|-fib(1) = 1
+	|  |  	| -fib(0) = 0
+	|  |-fib(1) = 1
+	|--fib(2)
+	   |-fib(1) = 1
+	   |-fib(0) = 0
+	all summed = 3  
+
+What does a function pointer store?
+	The memory address of the argument
+
+How can apply_op stay unchanged while cafe changes which price rule runs?
+	Since apply_op takes in a fuction as an argument, the app can just
+	run the function with the two given integar arguments. As long as there
+	are two int values that are passed in and the function name, the apply_op
+	will work.
+
+Why is a hand trace usefule before you chase a recursive bug in the debugger?
+	It can help show where a logical bug may be occuring. Or it can be used
+	to help verify the output
+
+Which commit message would you choose after fixing a missing base case, and why is that better than fix?
+	"Add base case to recursion to stop infinite loop". This is better because
+	it tells what specific part of a program was fixed, and why it needed to be
+	fixed.
+
+	
+e77b514 Update .gitignore Delete files
+52b7f7d Add cafe_specials.txt
+88c9e7f Edit specials.c main.c
+11af77e Add factorial and power
+ae1434c Add sum_order and test -- PASSED
+897e4a2 Create specials.h and scaffold .c
+4721177 first commit
