@@ -2,4 +2,6 @@ Makefile
 *.sh
 *.exe
 *.o
-
+.specials.h.swp
+.specials.c.swp
+cafe
