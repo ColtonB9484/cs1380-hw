@@ -1,0 +1,21 @@
+What does a pointer store? How is that different from storing the price itself?
+	A pointer stores the memory address of a variable/argument. It's different from storing the prices
+	itself because it doesnt really store the integar value plainly. It stores the pointer to the integar
+	value
+
+After int *tag = &latte; what do *tag, and &latte mean?
+	*tag is the pointer to a specific price stored at &latte.
+
+Why is it undefined bahavior to dereference an unitializezed pointer? What should you initialize a pointer to if it does noy yet have a target?
+	It would be undefined behavior becuause it contains bad data. A random memory address left over in the memory location. You should initialize a ptr to NULL
+	if it doesnt have a target yet, int *ptr = NULL;
+
+Why does retarget take int ** instead of int *?
+	Because retarget takes a pointer value, not just the int value at a pointer's location
+
+Why can print_price take const int * while set_price cannot?
+	Because print_price is not changing the price at all. therefore, the int value in print_price must remain unchanged. While set_price, the int value that
+	the is being pointed to can be changed.
+
+In your array demo, why does p + 1 not add on byte?
+

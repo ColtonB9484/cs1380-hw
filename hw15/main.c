@@ -9,30 +9,40 @@
 
 
 int main(void) {
-	int price_cents = 250;
-	int cost1 = 500;
-	int cost2 = 300;
-	char name[] = "Latte";
+	int price[] = {350, 450, 250};
+	char *name[] = {"Latte", "Mocha", "Juice"};
+	
+	//Set Price Test
+	printf("Price Before set_price: %s=%d addr=%p tag=%p *tag=%d\n", name[0], price[0], (void *) & price[0], (void *) &price[0], price[0]);
+	set_price(&price[0], 350);
+	printf("Price After set_price: %s=%d\n", name[0], price[0]);
 
 	//Swap Test
-	printf("Before swap_cents: a = %d, b = %d\n", cost1, cost2);
-	swap_cents(&cost1, &cost2);
-	printf("After swap_cents: a = %d, b = %d\n", cost1, cost2);
-
-	//Set Price Test
-	printf("\nPrice Before set_price: price = %d\n", price_cents);
-	set_price(&price_cents, 350);
-	printf("Price After set_price: price = %d\n", price_cents);
+	printf("\nSwap %s=%d with %s=%d -> ", name[0], price[0], name[1], price[1]);
+	swap_cents(&price[0], &price[1]);
+	printf("%s=%d, %s=%d\n", name[0], price[0], name[1], price[1]);
 
 	//Print Price Test
 	printf("\nTest print_price:\n");
-	print_price(name, &price_cents);
+	for(int i = 0; i < 3; i++) {
+		print_price(name[i], &price[i]);
+	}
+
+	//Missing Tag Tests
+	printf("\nTest NULL pointers\n");
+	int *null_test = NULL;
+	set_price(null_test, 200);
+	swap_cents(null_test, &price[2]);
+	retarget(&null_test, &price[3]);
 
 	//Retarget Test
-	int *ptr = &cost1;
-	printf("\nBefore retarget: *ptr = %d\n", *ptr);
-	retarget(&ptr, &cost2);
-	printf("After retarget: *ptr = %d\n", *ptr);	
+	int *special = &price[1];
+	printf("\nSpecial was %s %d;", name[1], *special);
+	retarget(&special, &price[2]);
+	printf("After retarget special is %s %d\n", name[2], *special);	
+
+	//Array Demo
+	printf("\nBoard: %d %d %d\n", *(price + 0), *(price + 1), *(price + 2));
 	
 
 	return 0;
