@@ -1,3 +1,6 @@
+github: github.com/ColtonB9484/cs1380-hw
+
+
 What does a pointer store? How is that different from storing the price itself?
 	A pointer stores the memory address of a variable/argument. It's different from storing the prices
 	itself because it doesnt really store the integar value plainly. It stores the pointer to the integar
