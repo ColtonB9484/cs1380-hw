@@ -1,3 +1,5 @@
+Github: github.com/ColtonB9484/cs1380-hw
+
 What are the base case and recursive case for you factorial?
 	The base case is if(n <= 1) return 1;
 	The recursive case is anytime n > 1
