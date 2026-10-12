@@ -3,8 +3,9 @@ What does a pointer store? How is that different from storing the price itself?
 	itself because it doesnt really store the integar value plainly. It stores the pointer to the integar
 	value
 
-After int *tag = &latte; what do *tag, and &latte mean?
-	*tag is the pointer to a specific price stored at &latte.
+After int *tag = &latte; what do tag, *tag, and &latte mean?
+	tag is the pointer, *tag is the value stored where the pointer points. &latte I used an array of string pointers. So this is not pertinant to me, but it would point
+	to where the latte variable is
 
 Why is it undefined bahavior to dereference an unitializezed pointer? What should you initialize a pointer to if it does noy yet have a target?
 	It would be undefined behavior becuause it contains bad data. A random memory address left over in the memory location. You should initialize a ptr to NULL
@@ -18,4 +19,17 @@ Why can print_price take const int * while set_price cannot?
 	the is being pointed to can be changed.
 
 In your array demo, why does p + 1 not add on byte?
+	Because it has a pointer asterisk at the beginning *(p + 1). This means that it is incrementing by the byte value of an int.
 
+Name one file that should stay out of Git for this project and why.
+	The prices executable should stay out of the Git because git does not convert executables well. Also, it would be easy for anyone with access to the repository
+	to compile the files themselves.
+
+Why push to the remote in addition to uploading hw15.zip on Canvas?
+	It is proof that I know how to use git and I have followed the instructions of using git consistently
+
+
+0681276 Complete Part 5 | Answer Questions in cafe_pointers.txt
+32771da Add functionality to prices.c. Add Tests to main.c -- PASSED
+5750564 Add prices util scaffold
+4721177 first commit
