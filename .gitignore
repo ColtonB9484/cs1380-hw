@@ -6,3 +6,5 @@ Makefile
 .specials.c.swp
 cafe
 *.zip
+*.c.swp
+prices
