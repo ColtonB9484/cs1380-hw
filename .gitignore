@@ -5,3 +5,4 @@ Makefile
 .specials.h.swp
 .specials.c.swp
 cafe
+*.zip
