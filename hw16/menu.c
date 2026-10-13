@@ -3,7 +3,16 @@
 #include "menu.h"
 
 void print_menu(const int *prices, int n) {
+	
+	if(prices == NULL || n <= 0) {
+		printf("\n");
+		return;
+	}
 
+	for(const int *p = prices; p < prices + n; p++) {
+		printf("%d ", *p);
+	}
+	printf("\n");
 }
 
 /*
