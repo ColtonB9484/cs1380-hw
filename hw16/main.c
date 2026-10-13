@@ -10,6 +10,9 @@ int main(void) {
 	//Print Menu Test
 	printf("Menu: ");
 	print_menu(menu_prices, menu_length);
+
+	//Price At Test
+	printf("price_at 2 = %d\n", price_at(menu_prices, menu_length, 2));
 	
 
 	return EXIT_SUCCESS;

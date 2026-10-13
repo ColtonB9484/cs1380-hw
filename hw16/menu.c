@@ -15,11 +15,16 @@ void print_menu(const int *prices, int n) {
 	printf("\n");
 }
 
-/*
+
 int price_at(const int *prices, int n, int index) {
-
+	if(prices == NULL || n <= 0 || index > n || index < 0) {
+		printf("\n");
+		return -1;
+	}
+	
+	return *(prices + index);
 }
-
+/*
 int max_price(const int *prices, int n) {
 
 }
