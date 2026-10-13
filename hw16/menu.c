@@ -36,11 +36,22 @@ int max_price(const int *prices, int n) {
 	}
 	return max;
 }
-/*
+
 void reverse_menu(int *prices, int n) {
+	if(prices == NULL || n <= 1) return;
+	
+	int *start = prices;
+	int *end = prices + n - 1;
 
+	while(start < end) {
+		int temp = *start;
+		*start = *end;
+		*end = temp;
+		start++;
+		end--;
+	}
 }
-
+/*
 int items_between(const int *start, const int *end) {
 
 }

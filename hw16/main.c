@@ -18,6 +18,19 @@ int main(void) {
 	printf("Max: %d\n", max_price(menu_prices, menu_length));
 
 	//Reverse Menu Test
+	printf("\nMemory Addresses before reverse_menu:\n");
+	for(int i = 0; i < menu_length; i++) {
+		printf("addr=%p ", (void *) &menu_prices[i]);
+	}
+	printf("\n\n");
+	reverse_menu(menu_prices, menu_length);
+	printf("Memory Addresses After reverse_menu:\n");
+	for(int i = 0; i < menu_length; i++) {
+		printf("addr=%p ", (void *) &menu_prices[i]);
+	}
+	printf("\n\n");
+	printf("Reversed Menu: ");
+	print_menu(menu_prices, menu_length);
 	
 
 	return EXIT_SUCCESS;
