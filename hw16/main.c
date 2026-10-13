@@ -13,6 +13,11 @@ int main(void) {
 
 	//Price At Test
 	printf("price_at 2 = %d\n", price_at(menu_prices, menu_length, 2));
+
+	//Max Price Test
+	printf("Max: %d\n", max_price(menu_prices, menu_length));
+
+	//Reverse Menu Test
 	
 
 	return EXIT_SUCCESS;

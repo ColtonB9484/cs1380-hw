@@ -24,11 +24,19 @@ int price_at(const int *prices, int n, int index) {
 	
 	return *(prices + index);
 }
-/*
+
 int max_price(const int *prices, int n) {
+	int max = 0;
+	if(prices == NULL || n <= 0) return -1;
 
+	for(const int *p = prices; p < prices + n; p++) {
+		if(max < *p) {
+			max = *p;
+		}
+	}
+	return max;
 }
-
+/*
 void reverse_menu(int *prices, int n) {
 
 }
