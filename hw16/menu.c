@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "menu.h"
 
 void print_menu(const int *prices, int n) {
@@ -59,8 +60,8 @@ int items_between(const int *start, const int *end) {
 	}
 	return num_between;
 }
-/*
-int drink_length(const char *name) {
 
+int drink_length(const char *name) {
+	return strlen(name);
 }
-*/
+

@@ -22,21 +22,21 @@ int main(void) {
 	for(int i = 0; i < menu_length; i++) {
 		printf("addr=%p ", (void *) &menu_prices[i]);
 	}
-	printf("\n\n");
+	printf("\n");
 	reverse_menu(menu_prices, menu_length);
 	printf("Memory Addresses After reverse_menu:\n");
 	for(int i = 0; i < menu_length; i++) {
 		printf("addr=%p ", (void *) &menu_prices[i]);
 	}
-	printf("\n\n");
+	printf("\n");
 	printf("Reversed Menu: ");
 	print_menu(menu_prices, menu_length);
 	
 	//Items Between Test
-	printf("Itemse between 0 and 4 = %d\n\n", items_between(&menu_prices[0], &menu_prices[4]));
+	printf("\nItems between 0 and 4 = %d\n", items_between(&menu_prices[0], &menu_prices[4]));
 	
 	//Drink Length Test
-	//printf("drink_length(\"Latte\") = %d\n", drink_length("Latte"));
+	printf("drink_length(\"Latte\") = %d\n", drink_length("Latte"));
 	
 
 	return EXIT_SUCCESS;
