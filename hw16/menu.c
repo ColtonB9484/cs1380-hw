@@ -62,6 +62,15 @@ int items_between(const int *start, const int *end) {
 }
 
 int drink_length(const char *name) {
-	return strlen(name);
+	if(name == NULL) {
+		return -1;
+	}
+	
+	const char *p = name;
+	while (*p != '\0') {
+		p++;
+	}
+		
+	return p - name;
 }
 

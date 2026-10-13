@@ -1,0 +1,29 @@
+github: github.com/ColtonB9484/cs1380-hw
+
+If p is an int *, why does p + 1 usually add 4 bytes(not 1)? What would p + 1 add if p were a char *?
+	Because pointer math const in elements not bytes (p + 1) means the address of the next int.
+	If p + 1 were a char * then it would add one byte.
+
+What does end - start mean when both pointers point into the same int array?
+	It gives the number of int elements between the two pointers
+
+Why is *(prices + 5) undefined behovior for an array of length 5, even if it compiles?
+	Because it would be the same as calling prices[5]. Since C starts arrays at index 0, this means that a 5 element array is 0 - 4, not 1 - 5. So it would go to
+	the memory address where prices[5] should be and receive whatever garbage data is in there
+
+Hand Trace: 
+	1.*p points to (arr + 2), which holds 30.
+	2.*(p+1) points to (arr + 3) which holds 40.
+	3.*(p-1) pionts to (arr + 1) which holds 20
+	4. (arr + 4) - p -- pointer arithmetic. Distance between element 4 and elemtn 2. which would be 2
+
+How does drin_length know when to stop without being passed a length
+	By checking if the next char == '\0'. If it does, then it will break out of the loop that is conting the characters
+
+Why is a one-line ahnd trace useful before you chase a bad pointer in the debugger?
+	Because it tells you what the pointer should be at each step of the function
+
+Why push to the remote in addition to uploading hw16.zip on Canvas?
+	To ensure we get in the habit of using git and going through the git cycle of development
+
+
