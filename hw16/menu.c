@@ -51,11 +51,15 @@ void reverse_menu(int *prices, int n) {
 		end--;
 	}
 }
-/*
+
 int items_between(const int *start, const int *end) {
-
+	int num_between = 0;
+	for(const int *p = start; p < end; p++) {
+		num_between++;
+	}
+	return num_between;
 }
-
+/*
 int drink_length(const char *name) {
 
 }

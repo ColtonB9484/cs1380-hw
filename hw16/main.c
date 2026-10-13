@@ -32,6 +32,12 @@ int main(void) {
 	printf("Reversed Menu: ");
 	print_menu(menu_prices, menu_length);
 	
+	//Items Between Test
+	printf("Itemse between 0 and 4 = %d\n\n", items_between(&menu_prices[0], &menu_prices[4]));
+	
+	//Drink Length Test
+	//printf("drink_length(\"Latte\") = %d\n", drink_length("Latte"));
+	
 
 	return EXIT_SUCCESS;
 }
