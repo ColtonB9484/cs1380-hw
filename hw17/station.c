@@ -74,5 +74,8 @@ int max_reading(const int *log, int n) {
 }
 
 void free_log(int **log) {
-	free(*log);
+	if(log != NULL && *log != NULL) {
+		free(*log);
+		*log = NULL;
+	}
 }
