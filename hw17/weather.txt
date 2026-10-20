@@ -21,3 +21,7 @@ If you alloc inside a function and return without free and without handling the 
 	You could get a dangling pointer or a memmory leak. The memory would then be allocated, but impossible to reach.
 
 Git history:
+69e7e1f Answer questions in weather.txt
+3b10f39 Added Tests in main.c. Fully Passed
+75cff78 Add Initial Functionality to station.c. Awaiting testing
+caa43e2 Create Header and Scaffold
