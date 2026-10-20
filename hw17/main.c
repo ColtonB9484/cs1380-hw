@@ -14,11 +14,14 @@ int main(void) {
 
 	//reading_at test
 	printf("Reading At 2 = %d\n", reading_at(log, 5, 2));
+	printf("reading At 4 = %d\n", reading_at(log,5,4));
 	
 	//max test
 	printf("Max = %d\n", max_reading(log, 5));
 
 	//calloc test
+	printf("Array before make_zero_log: ");
+	print_log(log,5);
 	log = make_zero_log(8);
 	printf("calloc zeros: ");
 	print_log(log, 8);
@@ -29,6 +32,15 @@ int main(void) {
 	if(log == NULL) {
 		printf("log is NULL\n");
 	} 
+
+	//NULL tests
+	printf("print_log(NULL, 5)\n");
+	print_log(NULL, 5);
+	printf("reading_at(NULL, 5, 0)\n");
+	reading_at(NULL, 5, 0);
+	printf("free_log with an already NULL pointer\n");
+	free_log(&log);
+	
 	
 
 	return EXIT_SUCCESS;
