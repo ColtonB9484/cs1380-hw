@@ -22,3 +22,7 @@ Why commit a woring make_log / print_log before you add realloc, instead of one 
 
 git log :
 
+279eec7 answer questions
+c0f9ebd Implement append_reading
+e7d7eaf Implement grow_log
+68bbf2e Add hw18 and station prototype/scaffold?
