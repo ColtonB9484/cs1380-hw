@@ -53,7 +53,7 @@ int max_reading(const int *log, int n) {
 
 int *grow_log(int *log, int old_n, int new_n) {
 	if(log == NULL || new_n <= old_n) {
-		return NULL;
+		return log;
 	}
 	
 	int *temp = realloc(log, new_n * sizeof(int));
@@ -66,7 +66,29 @@ int *grow_log(int *log, int old_n, int new_n) {
 }
 
 int *append_reading(int *log, int *n, int value) {
+	if(n == NULL) {
+		return NULL;
+	}
+	
+	if(log == NULL && *n == 0) {
+		int *temp = malloc(1 * sizeof(int));
+		if(temp == NULL) {
+			return NULL;
+		}
 
+		temp[*n] = value;
+		*n = *n + 1;
+		return temp;
+	}
+
+	int *temp = realloc(log, (*n + 1) * sizeof(int));
+	if (temp == NULL) {
+		return NULL;
+	}
+	
+	temp[*n] = value;
+	*n = *n + 1;
+	return temp;
 }
 
 void free_log(int **log) {
