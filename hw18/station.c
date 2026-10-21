@@ -51,8 +51,18 @@ int max_reading(const int *log, int n) {
 	return max;
 }
 
-int *grow_log(int *log, int *n, int value) {
+int *grow_log(int *log, int old_n, int new_n) {
+	if(log == NULL || new_n <= old_n) {
+		return NULL;
+	}
+	
+	int *temp = realloc(log, new_n * sizeof(int));
 
+	if(temp == NULL) {
+		return NULL;
+	}
+
+	return temp;
 }
 
 int *append_reading(int *log, int *n, int value) {

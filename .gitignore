@@ -7,5 +7,7 @@ Makefile
 cafe
 *.zip
 *.c.swp
+*.h.swp
 prices
 menu
+station
