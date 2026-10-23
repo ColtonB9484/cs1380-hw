@@ -80,8 +80,8 @@ void print_board(const int board[][GAMES], int nteams){
 	
 	printf("Board: \n");
 	for(int i = 0; i < nteams; i++) {
-		for(int j = 0; j < GAMES - 1; j++) {
-			printf("%d ", board[j][i]);
+		for(int j = 0; j < GAMES; j++) {
+			printf("%d ", board[i][j]);
 		}
 		printf("\n");
 	}

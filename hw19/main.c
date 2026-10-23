@@ -6,13 +6,12 @@ int main(void) {
 	int scores[] = {12, 8, 15, 10, 9};
 	int scores_size = sizeof(scores) / sizeof(int);
 	int board[][GAMES] = {
-		{12, 9, 11},
-		{8, 11, 6},
-		{15, 7, 16},
-		{10, 14, 8}
+		{12, 8, 15, 10},
+		{9, 11, 7, 14},
+		{13, 6, 16, 8}
 	};
-	int board_rows = sizeof(board[0]) / sizeof(board[0][0]);
-	
+	int board_rows = sizeof(board) / sizeof(board[0]);
+
 	//print_scores test
 	print_scores(scores, scores_size);
 	printf("n = %d\n", scores_size);
@@ -36,7 +35,7 @@ int main(void) {
 	print_board(board, board_rows);
 
 	//board_sum test
-	
+	printf("Board Sum: %d\n", board_sum(board, board_rows)); 
 
 	return EXIT_SUCCESS;
 }
