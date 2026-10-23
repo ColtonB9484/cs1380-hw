@@ -1,0 +1,68 @@
+Github: github.com/ColtonB9484/cs1380-hw
+
+Valid indices for an array of length n run from which value to which value? What does C do if you read scores[n]?
+	Valid indices are from 0...n-1
+	If you read scores[n] C will fail to compile, since scores[n] would be out of the valid range by one value
+
+Why does sizeof(scores) / sizeof(scores[0]) work in main on the actual array, but fail inside a function that took const int scores[]?
+	It works in main because arrays become pointers when passed as an argument into a function. 
+
+For int board[3][4], which element is board[1][2]
+	It would be Row 2, Column 3
+	Rows are the first element of the array so anything board[1]<-here[2], Columns are the second element in the array board[1][2]<- here
+
+Why must a function that recieves an array also reveice the length?
+	Because arrays don't store their own size. Since there is not 'end array' marker, you need to calculate the size of the array and pass the size in
+	as an argument
+In your 2d print loop, which index is the row and which is the column? What goes wrong if you swap them?
+	The first index (board[this index][]) is the row. The second index (baord[][this index]) is the column.
+	If they're swapped you could get garbage data from whatever is in the memory address at the 'next' index
+
+GDB: 
+	
+Breakpoint 1 at 0x16a0: file scores.c, line 99.
+Starting program: /home/ubuntu/cs1380-hw-git/hw19/scores 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, board_sum (board=0x7fffffffe170, nteams=3) at scores.c:99
+99				sum += board[i][j];
+$1 = 0
+$2 = 12
+Continuing.
+
+Breakpoint 1, board_sum (board=0x7fffffffe170, nteams=3) at scores.c:99
+99				sum += board[i][j];
+$3 = 12
+$4 = 8
+Continuing.
+
+Breakpoint 1, board_sum (board=0x7fffffffe170, nteams=3) at scores.c:99
+99				sum += board[i][j];
+$5 = 20
+$6 = 15
+Continuing.
+
+Breakpoint 1, board_sum (board=0x7fffffffe170, nteams=3) at scores.c:99
+99				sum += board[i][j];
+$7 = 35
+$8 = 10
+[Inferior 1 (process 24458) killed]
+
+What does compiling with -g add that GDB needs? What happens if tour forget -g?
+	-g adds symbol tables that GDB can use for debugging. If -g is forgotten, you can't creat breakpoints in files or really do anything but run the program
+
+Why push to remote in addition to uploading hw19.zip on Canvas?
+	To get comfortable with the git workflow and cycle using git status, git add, git commit, and git push
+
+Git log:
+
+1194949 Implement Board Function and Tests Fully
+6374089 Implement some tests
+92537ad Implement scores.c
+87c2790 Add prototypes and scaffold
