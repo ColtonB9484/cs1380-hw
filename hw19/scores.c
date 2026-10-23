@@ -49,8 +49,8 @@ int max_score(const int scores[], int n) {
 	
 	int max = 0;
 	for(int i = 0; i < n; i++) {
-		if(score[i] > max) {
-			max = score[i];
+		if(scores[i] > max) {
+			max = scores[i];
 		}
 	}
 
@@ -65,7 +65,7 @@ int count_at_least(const int scores[], int n, int threshold) {
 	int count = 0;
 
 	for(int i = 0; i < n; i++) {
-		if(scores[i] >= treshold) {
+		if(scores[i] >= threshold) {
 			count++;
 		}
 	}
@@ -78,9 +78,10 @@ void print_board(const int board[][GAMES], int nteams){
 		return;
 	}
 	
+	printf("Board: \n");
 	for(int i = 0; i < nteams; i++) {
-		for(int j = 0; j < GAMES; j++) {
-			printf("%d ", board[i][j]);
+		for(int j = 0; j < GAMES - 1; j++) {
+			printf("%d ", board[j][i]);
 		}
 		printf("\n");
 	}
