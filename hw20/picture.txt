@@ -1,0 +1,56 @@
+In the worst case, why must find_code look at every cell?
+	Because the picture's order cannot be changed, and the picture numbers are
+	not sorted there is not a way to search efficiently. We must look at every
+	element within the array to determine if a number is not there.
+
+Why is COLS part of the parameter type pic[][COLS], while the number of rows is a separate argument?
+	
+
+What does the array store, and where does the printed glyph(such as # or ' ') come frome?
+	The array stores int values. The printed glyphs come from a conditional
+	statement that checks what number an element within the array is. If it is
+	1, it prints '#', if it is 0 it prints '.', everything else prints '?'
+
+If set_cell is given row == nrows, why must it refuse the write?
+	because array index starts at 0, if row == nrows, it is outside the bounds
+	of the array. Rows must be greater than 0 and less than (nrows - 1)
+
+Row-major order means the scan finishes a row before it starts the next. What is the flat index of pic[2][3] when COLS is 5?
+	the flat index is (row * COLS + col)= (2 * 5 + 3)= 13
+
+TIME: 
+	real	0m0.003s
+	user 	0m0.000s
+	sys	0m0.001s
+
+DEBUG:
+Breakpoint 1 at 0x12c4: file main.c, line 22.
+Breakpoint 2 at 0x12e3: file main.c, line 23.
+Starting program: /home/ubuntu/cs1380-hw-git/hw20/picture 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:22
+⚠️ warning: Source file is more recent than executable.
+22		set_cell(pic, nrows, 2, 2, 1);
+$1 = {{0, 0, 0, 0, 0}, {0, 1, 1, 1, 0}, {0, 1, 0, 1, 0}, {0, 0, 0, 0, 0}}
+Continuing.
+
+Breakpoint 2, main () at main.c:23
+23		printf("After set_cell(2, 2, 1):\n");
+$2 = {{0, 0, 0, 0, 0}, {0, 1, 1, 1, 0}, {0, 1, 1, 1, 0}, {0, 0, 0, 0, 0}}
+Continuing.
+[Inferior 1 (process 36649) exited normally]
+
+What does time tell you that stepping in GDB does not? Why is a 45 picture a weak example for a real profiler?
+	Time can tell you what the big O will be of a program. a 4x5 picture is a 
+	weak example because it is not a big enough data set. with such a small
+	set of data, the time will be instantanious.
+
+Why push to the remote in addition to uploading hw20.zip on Canvas?
+	To get used to the cycle of developing using git. git status git add git commit etc
