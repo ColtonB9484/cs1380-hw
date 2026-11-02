@@ -68,6 +68,9 @@ int team_same(const char a[], const char b[]) {
 }
 
 void shout(char name[]) {
+	//check null
+	if(name == nullptr) return;
+
 	int index = 0;
 
 	while(name[index] != '\0') {
