@@ -16,8 +16,14 @@ void print_team(const char name[]) {
 }
 
 int team_len(const char name[]) {
+	int index = 0;
+	while(1) {
+		if(name[index] == '\0') break;
+		
+		index++;
+	}
 
-	return 0;
+	return index;
 }
 
 void team_copy(char dest[], int dest_size, const char src[]) {

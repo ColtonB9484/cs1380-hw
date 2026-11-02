@@ -13,7 +13,7 @@ int main(void) {
 	char other_name[] = "Brian";
 
 	print_team(name);
-
+	printf("'Colton' char count: %d\n", team_len(name));
 
 	return EXIT_SUCCESS;
 }
