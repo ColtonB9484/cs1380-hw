@@ -1,0 +1,13 @@
+Why must a C string end with '\0'? What can go wrong if that byte is missing?
+	A C string must end with the terminator so that methods that use a string
+	as a parameter know where the string array ends. Otherwise there may be
+	garbage data after the termantor.
+
+Why is char *p = "Wolves"; p[0] = 'w'; unsafe while changing char name[] = "Wolves"; is allowed?
+	Because the pointer with *p will not add a the terminator '\0' at the end,
+	so passing p into a function that uses the array will not know when to end.
+
+If dest has room for 5 character including '\0', what should team_copy store when src is "Wolves"?
+	team_copy should store "Wolv". It only stores 4 character plus the '\0' at the end
+
+

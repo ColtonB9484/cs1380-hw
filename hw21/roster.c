@@ -68,6 +68,15 @@ int team_same(const char a[], const char b[]) {
 }
 
 void shout(char name[]) {
+	int index = 0;
 
+	while(name[index] != '\0') {
+		//check if lowercase, do nothing if uppercase
+		if(name[index] >= 'a' && name[index] <= 'z') {
+			name[index] -= 32; //ASCII: lowercase - 32 = uppercase
+		}
+		index++;
+	}
+	printf("%s\n", name);
 }
 
