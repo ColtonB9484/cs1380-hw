@@ -31,6 +31,12 @@ Why a project should use its own environement instead of changing the Python tha
 	To try to mitigate 'dependency hell,' where a program has many programs that
 	need specific versions of software or libraries to run a program. 
 
+Why would two homework folders on the same computer wnat differnt version of the same library?
+	Becuase there could be a dependency on a previous version of a library.
+
+Why push to the remote in addition to uploading hw21.zip?
+	To get used to the routine of using best practices when developing with git.
+
 diff:
 1c1
 < /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
