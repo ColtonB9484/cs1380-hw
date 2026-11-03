@@ -10,4 +10,37 @@ Why is char *p = "Wolves"; p[0] = 'w'; unsafe while changing char name[] = "Wolv
 If dest has room for 5 character including '\0', what should team_copy store when src is "Wolves"?
 	team_copy should store "Wolv". It only stores 4 character plus the '\0' at the end
 
+After a truncated team_copy, how do you know the destination is still a valid C string?
+	Because it will have the  terminator '\0' at the end of the character array,
+	telling the compiler that it is a string.
+
+If two different arrays hold the letters W o l v e s \0, why can team_same return 1 evern though the arrays are not the same object in memory?
+	Because team_same iterates through all the characters, not just the object 
+	in memory until the terminator is reached.
+
+What a dependancy is:
+	A dependency is when software needs a another software to run on a machine.
+	This means that software may run fine on one machine, but will not run at
+	all an another. A dependency in C would be constom headers/libraries that 
+	someone creates. Without the correct .h file, the program will not run when
+	executed. A dependency in python would be any module that someone may import
+	that is not part of the standard library, something that the user would have
+	to install on their own, like requests or uv
+
+Why a project should use its own environement instead of changing the Python that came with the operation System?
+	To try to mitigate 'dependency hell,' where a program has many programs that
+	need specific versions of software or libraries to run a program. 
+
+diff:
+1c1
+< /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+---
+> /home/ubuntu/cs1380-hw-git/hw21/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+Now instead of showing my local environemtn, it shows the virtual environment above
+
+which python:	
+/home/ubuntu/cs1380-hw-git/hw21/venv/bin/python
+	Shell now prefers the venv because it has a venv folder.
+
+git log:
 
