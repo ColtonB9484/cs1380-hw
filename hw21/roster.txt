@@ -49,4 +49,12 @@ which python:
 	Shell now prefers the venv because it has a venv folder.
 
 git log:
-
+117ef7f Answer final questions
+0ec4014 Finish part C
+e887957 Implement NULL tests and change demo to fit Part B
+d76c19d Implement shout, answer part A
+b6baa8b Implement team_same
+5894978 Implement team_copy
+0b71488 Implement team_len
+3a2a87a Add print_team, update gitignore
+9f9135a Create header
