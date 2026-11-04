@@ -36,3 +36,12 @@ Why is givin a classmate only your .c files different from giveng them the compi
 	run on another persons hardware. That way, giving a .c file would allow them
 	to compile on their machine which would always work, assuming the code compiles
 	correctly in the first place.
+
+gitlog:
+
+a422c66 Answer questions
+fffbed2 Implement lables_match, find_text, and tests
+78392d2 Implement safe_copy and safe_join w/tests
+d91ee88 Update .gitignore, Implement print_label & label_len
+6e29ac2 Add header and demo scaffold
+4721177 first commit
