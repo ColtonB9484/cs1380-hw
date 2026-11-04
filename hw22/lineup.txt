@@ -1,0 +1,38 @@
+Why prefer strncpy + a forced '\0' over plain strcpy when the destination has a fixed size?
+	Because strcpy does not have a built in way to specify string length. This
+	means that there could be overflow data in memory that is not specified to
+	be part of the string. The '\0' ensures that the string can be used in
+	other string methods as well ass printf("$s", string) statements
+
+Before calling strncat, what two number do you need so you know how many characters still fit?
+	You need to know the length of the string that is being placed at the end
+	of the destination string. As well as the length of the destination string
+	To make sure that there is no overflow data in memory.
+
+What does strcmp return when the two strings are equal?
+	It returns zero if two strings are equal
+
+If strstr finds a match, why is the return value a pointer into the original string rather than a new copy?
+	To avoid memory leaks and decrease unnecessary memory allocation
+
+After safe_join, how do yo know dest is still a valid C string?
+	Because there is a force terminator at the end '\0', which makes it a valid
+	string.
+
+What is the source for this homeowork, and what is one artifact you produces by compiling?
+	The source is main.c/lineup.c, with the artifact being a Makefile.
+
+What kind of change bumps PATCH, MINOR, MAJOR?
+	A Patch is only bug fixes and has to be fully backwards compatible.
+	Minor addes new functinality in a backwards compatible way.
+	Major has a big change that may require code madifications
+
+Suppose your lineup helper is version 1.2.3. You only fix a bug in safe_join and keep the same function names. What version number would you ship next and why?
+	1.2.4, because it would be considered a patch. It only contains a bug fix
+	and is fully backward comaptible. Therefore, a patch.
+
+Why is givin a classmate only your .c files different from giveng them the compile lineup program?
+	Since the compiled program was made for my machine, it might not be able to
+	run on another persons hardware. That way, giving a .c file would allow them
+	to compile on their machine which would always work, assuming the code compiles
+	correctly in the first place.
