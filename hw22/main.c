@@ -48,6 +48,49 @@ int main(void) {
 	print_label(team_a);
 	safe_join(team_a, copy_size, NULL);
 	print_label(team_a);
+	printf("\n");
+
+	//labels_match test
+	safe_copy(team_copy, copy_size, team_b);
+	printf("%s matches %s? -> %d\n", team_copy, team_b, labels_match(team_copy, team_b));
+	printf("%s mathces %s? -> %d\n", team_a, team_b, labels_match(team_a, team_b));
+	//labels_match null tets
+	printf("labels_match(NULL, team_b) = %d\n", labels_match(NULL, team_b));
+	printf("labels_match(team_a, NULL) = %d\n\n", labels_match(team_a, NULL));
+	
+	//find_text tests
+	char needle[20] = "na";
+	int found_position = find_text(team_a, needle);
+	
+	if(found_position < 0) {
+		printf("'%s' could not be found in '%s'\n", needle, team_a);
+	} else {
+
+		printf("Found '%s' in '%s' at position %d\n", needle, team_a, found_position);
+	}
+
+	found_position = find_text(team_b, needle);
+	
+	if(found_position < 0) {
+		printf("'%s' could not be found in '%s'\n", needle, team_b);
+	} else {
+		printf("Found '%s' in '%s' at position %d\n", needle, team_b, found_position);
+	}
+	//null tests
+	found_position = find_text(NULL, needle);
+	if(found_position < 0) {
+		printf("NULL pointer\n");
+	} else {
+		printf("How'd this happen?\n");
+	}
+
+		
+	found_position = find_text(team_a, NULL);
+	if(found_position < 0) {
+		printf("NULL pointer\n");
+	} else {
+		printf("How'd this happen?\n");
+	}
 
 	return EXIT_SUCCESS;
 }

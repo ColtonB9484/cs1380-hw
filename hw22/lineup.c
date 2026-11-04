@@ -26,10 +26,10 @@ void safe_copy(char dest[], int dest_size, const char src[]) {
 	if(dest == nullptr || dest_size <= 0) {
 		
 	} else if (src == nullptr && dest_size > 0) {
-		dest[0] == '\0';
+		dest[0] = '\0';
 	} else {
 		strncpy(dest, src, dest_size - 1);
-		dest[dest_size - 1] == '\0';
+		dest[dest_size - 1] = '\0';
 	}
 }
 
@@ -41,10 +41,19 @@ void safe_join(char dest[], int dest_size, const char extra[]) {
 }
 
 int labels_match(const char a[], const char b[]) {
-
+	if(a == nullptr || b == nullptr) {
+		return 0;
+	} else if(strcmp(a, b) == 0) {
+		return 1;
+	} else {
+		return 0;
+	}
 }
 
 int find_text(const char label[], const char needle[]) {
+	if(label == nullptr || needle == nullptr) return -1;
 
+	char const *found = strstr(label, needle);
+	return found - label;
 }
 
