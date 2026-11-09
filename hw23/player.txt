@@ -1,0 +1,18 @@
+1) In one sentence, why put name, jersey, and poitns in one struct instead of three separate variables?
+	To ensure that the data you want to access are all related.
+
+2) What does p->jersey mean, and how is it different from p.jersey?
+	p->jersey is a pointer to the memory location of the jersey variable in the struct.
+	In contrast, p.jersey in a variable in the struct.
+
+3) Why must init_player leave room for '\0' when copying into name[32]?
+	Because leaving the '\0' will ensure that the char array name will act like
+	a string instead of an array of characters.
+
+4) Why does add_points take struct Player * instead of struct Player by value?
+	Pointers to structures are better when passing into functions. This makes
+	the backend more efficient becuase it avoids copying entire structures when
+	being passed into functions
+
+5) If you have struct Player roster[3], how do you pass the second player to print_player?
+	print_player(roster[1]);

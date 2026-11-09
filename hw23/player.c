@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "player.h"
 
 
@@ -15,7 +16,7 @@ void print_player(const struct Player *p) {
 	//null check -- return nothing if null
 	if(p == nullptr) return;
 
-	printf("Name: %s Jersey: %d Points: %d\n", p.name, p.jersey, p.points); 
+	printf("Name: %s Jersey: %d Points: %d\n", p->name, p->jersey, p->points); 
 }
 
 void init_player(struct Player *p, const char name[], int jersey, int points) {
@@ -26,7 +27,8 @@ void init_player(struct Player *p, const char name[], int jersey, int points) {
 		 p->name[0] = '\0';
 	}
 	else {
-		p->name = name;
+		strncpy(p->name, name, 31);
+		p->name[32] = '\0';
 	}
 	
 	p->jersey = jersey;
@@ -39,7 +41,7 @@ int get_points(const struct Player *p) {
 		return 0;
 	}
 
-	return p.points;
+	return p->points;
 }
 
 void add_points(struct Player *p, int more) {
@@ -48,12 +50,12 @@ void add_points(struct Player *p, int more) {
 		return;
 	}
 
-	p->points = p.points + more;
+	p->points = p->points + more;
 }
 
 int same_jersey(const struct Player *a, const struct Player *b) {
 	//if both non-null & jerseys match, return 1
-	if((a != nullptr || b != nullptr) && a->jersey == b->jersey) {
+	if(a != nullptr && b != nullptr && a->jersey == b->jersey) {
 		return 1;
 	}
 
