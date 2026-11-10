@@ -27,8 +27,8 @@ void init_player(struct Player *p, const char name[], int jersey, int points) {
 		 p->name[0] = '\0';
 	}
 	else {
-		strncpy(p->name, name, 31);
-		p->name[32] = '\0';
+		strncpy(p->name, name, sizeof(p->name) - 1);
+		p->name[sizeof(p->name) - 1] = '\0';
 	}
 	
 	p->jersey = jersey;
