@@ -16,6 +16,11 @@ struct Stat {
 	union StatValue value;
 };
 
+struct test_size {
+	int score;
+	float average;
+};
+
 void print_stat(const struct Stat *s);
 void set_score(struct Stat *s, int score);
 void set_average(struct Stat *s, float average);

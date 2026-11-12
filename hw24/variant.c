@@ -21,24 +21,44 @@ void print_stat(const struct Stat *s) {
 		printf("Unkown Kind\n");
 	}
 }
-/*
+
 void set_score(struct Stat *s, int score) {
+	//null check
+	if(s == nullptr) return;
+
+	//change kind and set score
+	s->kind = STAT_SCORE;
+	s->value.score = score;
 
 }
 
 void set_average(struct Stat *s, float average) {
+	//null check
+	if(s == nullptr) return;
+
+	//chang kind and set average
+	s->kind = STAT_AVERAGE;
+	s->value.average = average;
 
 }
 
 int get_score(const struct Stat *s) {
-
+	if(s == nullptr || s->kind != STAT_SCORE) return 0;
+	
+	return s->value.score; 
 }
 
 float get_average(const struct Stat *s) {
-
+	if(s == nullptr || s->kind != STAT_AVERAGE) return 0.0f;
+	
+	return s->value.average;
 }
 
 void print_sizes(void) {
+	size_t size = sizeof(union StatValue);
+	printf("Size of union: %zu\n", size);
 
+	size = sizeof(struct test_size);
+	printf("Size of struct { int score; float average; } : %zu\n", size);
 }
-*/
+
