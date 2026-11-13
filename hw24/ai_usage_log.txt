@@ -1,0 +1,8 @@
+I had an agent help me with accessing union/struct information from main.c and 
+variant.c. I was having trouble getting the code to work with how the textbook was
+making/initializing/declaring the union.
+
+I had an agent check for any logical bugs, gaps in null checks, and recommend fixes
+if there were some things to fix. It did not find any, but it did recommend some 
+better 'coding practices' that were not relavent to this assignment
+

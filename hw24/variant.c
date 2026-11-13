@@ -54,6 +54,12 @@ float get_average(const struct Stat *s) {
 	return s->value.average;
 }
 
+//For print_sizes only, shows difference in size of unions and structs
+struct test_size {
+	int score;
+	float average;
+};
+
 void print_sizes(void) {
 	size_t size = sizeof(union StatValue);
 	printf("Size of union: %zu\n", size);

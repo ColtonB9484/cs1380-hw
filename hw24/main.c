@@ -42,14 +42,14 @@ int main(void) {
 
 	//get_score / get_average tests
 	printf("\nget_score/get_average tests\n");
-	printf("Stat_1 score is %d\n", get_score(&stat_1));
-	printf("Stat_1 average is %.2f\n", get_average(&stat_1));
+	printf("Stat_1 get_score(wrong kind): %d\n", get_score(&stat_1));
+	printf("Stat_1 get_average: %.2f\n", get_average(&stat_1));
 
-	printf("Stat_2 score is %d\n", get_score(&stat_2));
-	printf("Stat_2 average is %.2f\n", get_average(&stat_2));
+	printf("Stat_2 get_score: %d\n", get_score(&stat_2));
+	printf("Stat_2 get_average(wrong kind): %.2f\n", get_average(&stat_2));
 
-	printf("NULL score is %d\n", get_score(nullptr));
-	printf("Null average is %.2f\n", get_average(nullptr));
+	printf("NULL get_score: %d\n", get_score(nullptr));
+	printf("NULL get_average: %.2f\n", get_average(nullptr));
 
 	//print_sizes test
 	printf("\nprint_sizes test\n");

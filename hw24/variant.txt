@@ -1,0 +1,34 @@
+1) Union stores different data types in the same memory register, while structs
+	store different data types in different registers.
+
+2) It is unsafe because you have set the datatype held in value to an int value with
+	set_score, so you should call value.score instead.
+
+3) kind allows logic statments to evaluate what kind of datatype the current union
+	is holding in the Struct
+
+4) If you  get_score a Stat while it holds an float value, it will return the wrong
+	data type, which causes the program not to compile. The same is true for
+	using get_average while a Stat holds an int value.
+
+5) Since Union also has two fields and has a smaller size, it tells us that the 
+	union can hold the two fields in the same spot in memory(but not at the same
+	time).
+
+6) Avoids overflowing context window or degrading performance of the model
+
+7) It replaces the conversation with a summary if the conversation context gets 
+	too long
+
+8) AGENTS.md is a way for you to set up how the agent will function before it opens.
+	
+9) review null checks before finishing and report any gaps in null checks
+
+10) An agent can delete something you don't want it to delete accidently
+
+11) What you move onto a new homework / move onto a new topic. If there is no
+	relation between projects, there is no need for an agent to keep its
+	context
+
+gitlog:
+

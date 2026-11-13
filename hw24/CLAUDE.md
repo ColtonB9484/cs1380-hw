@@ -1,0 +1,5 @@
+- do not change any code unless prompted
+- make sure the program compiles using Makefile
+- find any logic bugs and report them before finishing
+- review null checks and report gaps in checks before finishing
+- recommend fixes to logic, null checks, and overall code quality before finishing
