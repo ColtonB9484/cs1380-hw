@@ -32,3 +32,6 @@
 
 gitlog:
 
+2830b82 Update variant files, answer questions, make CLAUDE.md, submit ai_usage_log
+d2b27a0 Implement Part A and Part B
+68a4bca Add variant.c variant.h main.c
