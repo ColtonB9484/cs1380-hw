@@ -1,0 +1,6 @@
+1) The base case for factorial is if(n <= 1) return 1;
+	The recursive case for factorial is return n * factorial(n - 1);
+
+2) If you omit the base case, heap will get too big, causing a stack overflow. 
+
+3) :
