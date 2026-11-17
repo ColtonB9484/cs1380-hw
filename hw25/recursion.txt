@@ -1,3 +1,12 @@
+Hand trace factorial(4):
+	= 4 * factorial(3)
+	= 4 * (3 * factorial(2))	
+	= 4 * (3 * (2 * factorial(1))
+	= 4 * (3 * (2 * 1))
+	= 4 * (3 * 2)
+	= 4 * 6
+	= 24
+
 1) The base case for factorial is if(n <= 1) return 1;
 	The recursive case for factorial is return n * factorial(n - 1);
 
@@ -14,10 +23,22 @@
 
 7) hard-earned knowledge is what is lost without a why
 
-8)
+8) The best commit message is 6c93f0d. It explains that I added a new test case, and
+	why I added the new test case.
 
-9) 
+9) 	1) Environement: OS, and relavent configuration
+	2) What you expected bs what actually happend
+	3) Steps to reproduce
+	4) What you've already tried
 
 10) I should disclose how the LLM helped me write or debug the recursion, as well 
 	if I understand it. I should not submit the code written if I cannot explain
 	wht the code does.
+
+gitlog:
+
+6c93f0d Added new test case for function max_in_array. This tests on a range of negative integars and pasitive integars to ensure proper functionality of max_in_array
+846a796 Added comments to describe the 'WHY' of a code segment.
+60311bb implement Part B
+b6c6f77 Implement recursion, Add prototypes
+0b01c6c Create header
