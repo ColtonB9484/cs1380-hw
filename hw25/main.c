@@ -29,13 +29,14 @@ int main(void) {
 	printf("fib(-2) = %lld\n", fib(-2));	
 
 	//max_in_arry test
-	int n = 6;
+	int n = 6; //arbitrary number to cap size of array for passing into function
 	int double_max[6] = {4, 8, 10, 4, 10, 7};
 	int first_max[6] = {23, 5, 8, 6, 3, 9};
 	int last_max[6] = {4, 7, 9, 1, 4, 20};
 	int negatives[6] = {-1, -6, -6, -7, -10, -8};
 	int zero_max[6] = {-5, -9, -4, 0, -10, -50};
 	int one_max[6] = {4};
+	int max_with_negatives[6] = {-10, 0, 9, 4, -6, -3};
 	
 	printf("\nMax(10): %d\n", max_in_array(double_max, n));
 	printf("Max(23): %d\n", max_in_array(first_max, n));
@@ -43,10 +44,11 @@ int main(void) {
 	printf("Max(-1): %d\n", max_in_array(negatives, n));
 	printf("Max(0): %d\n", max_in_array(zero_max, n));
 	printf("Max(4): %d\n", max_in_array(one_max, 1));
+	printf("Max(9): %d\n", max_in_array(max_with_negatives, n));
 	printf("Null Test: %d\n", max_in_array(nullptr, n));
 	printf("n <= 0: %d\n", max_in_array(last_max, 0));
 	
-	//is_palindrom test
+	//is_palindrome test
 	char palindrome_1[] = {"tacocat"};
 	char palindrome_2[] = {"racecar"};
 	char palindrome_3[] = {"abba"};
