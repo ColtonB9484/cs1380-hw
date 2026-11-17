@@ -3,4 +3,21 @@
 
 2) If you omit the base case, heap will get too big, causing a stack overflow. 
 
-3) :
+3) 
+
+4) n shrinks on each recursive call
+
+5) A loop is a better fit when an array needs to only be scanned once.
+
+6) Unhelpful: //TODO: doesn't work
+	Helpful in regards to magic numbers: //8 is the maximum number of elements in an array
+
+7) hard-earned knowledge is what is lost without a why
+
+8)
+
+9) 
+
+10) I should disclose how the LLM helped me write or debug the recursion, as well 
+	if I understand it. I should not submit the code written if I cannot explain
+	wht the code does.
