@@ -17,3 +17,7 @@ lineup
 player
 variant
 basic_recursion
+text_copy
+basic_file_ops
+binary_records
+copy.txt

@@ -1,0 +1,9 @@
+1) fopen returns NULL on failiure. You should always check if the file opened 
+	successfully before using FILE *
+
+2) "w" writes to a new file. This can overwrite an existing file, so use it carefully
+	"r" reads text from a file as input. It reads line by line
+
+3) you should fclose on every exit path to make sure that you don't corrupt a file.
+
+
