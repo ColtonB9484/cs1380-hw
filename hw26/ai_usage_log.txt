@@ -1,0 +1,20 @@
+I used ai to help me with the fread function in the binary_records.c
+I was running into issues reading from a file the way the book described. The program
+was just reading from the first line of the binary file and i couldnt understand why.
+After the ai helped me, I found the problem. At first this was my code:
+Student std;
+for(size_t i = 0; size_t < array_count; i++) {
+	fread(&std, sizeof(Student), array_count, output_file);
+	printf("ID: %d, Score %.2f\n", std.id, std.score);
+}
+
+The agent explained the problem:
+Because std only holds one student, fread writes all records but only the first 
+record fits in std. Causing an overflow / undefined behavior. In practice
+my program was only writing the first record 5 times to the console.
+Then the agent gave me two options for how to fix:
+Option 1: was a way to keep fread inside a loop, but I found that way to be a bit
+	too 'roundabout' and ugly
+Option 2: is the way it currently is inside binary_records.c Another factor
+	for why I decided on option 2 was because it was similar to how the program 
+	wrote to the binary file.

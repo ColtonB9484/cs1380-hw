@@ -13,3 +13,18 @@
 
 5) fwrite writes a specified number of elements to a file, while fprint f writes
 	a formatted output to a file.
+
+6) To theck if  afile operation succeeded, check for a NULL value. If there is a NULL
+	then the file operation did not succeed. For fwrite, you need to inspect if
+	the total number of lines written is correct. So you need to check for an
+	integar number or size_t.
+
+7) My README does put usage before build steps. That is improtant because it ensures
+	that all the correct files are present in the directory.
+
+8) //Reads to file		//Use fprintf so that that formatted text is put into file
+
+9) Environment, What you expected vs what actually happened, Steps to reproduce, What you've already tried
+
+10) You should disclose what the AI helped you with and how what the AI wrote works to ensure understanding.
+	You should not submit anything you cannot explain.
