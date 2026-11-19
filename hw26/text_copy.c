@@ -15,8 +15,12 @@ int main(void) {
 		
 		char buffer[256];
 		int count = 0;
+		/* WHY fputs: Because we do not need to format the text
+			going into the output_file, there is no need to use
+			fprintf. If there were multiple values going into the
+			output file, then fprintf would be preferable */
 		while(fgets(buffer, sizeof(buffer), input_file) != NULL) {
-			fprintf(output_file, "%s", buffer);
+			fputs(buffer, output_file);
 			count++;
 		}
 
