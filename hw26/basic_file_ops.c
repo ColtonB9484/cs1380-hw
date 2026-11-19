@@ -16,7 +16,7 @@ int main(void) {
 		fprintf(output_file, "Jordan Love\n");
 		fprintf(output_file, "Mathew Golden\n");
 		fprintf(output_file, "Micah Parsons\n");
-
+	
 		fclose(output_file);
 	}
 
@@ -36,8 +36,6 @@ int main(void) {
 
 		fclose(output_file);
 	}
-	
-	
 
 	return EXIT_SUCCESS;
 }

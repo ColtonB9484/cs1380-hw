@@ -25,9 +25,8 @@ int main(void) {
 		}
 
 		fclose(input_file);
-		fclose(output_file);
-	}	
-	
+		fclose(output_file);	
+	}
 
 	return EXIT_SUCCESS;
 }

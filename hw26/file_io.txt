@@ -6,4 +6,10 @@
 
 3) you should fclose on every exit path to make sure that you don't corrupt a file.
 
+4) fgets is a better choice than fsanf for reading a line because fgets scans the 
+	whole line, and puts that in string format. While fscanf will scan a line
+	for a given format. For example fgets(FILE, "%d", &num); will find and scan
+	an integar.
 
+5) fwrite writes a specified number of elements to a file, while fprint f writes
+	a formatted output to a file.
